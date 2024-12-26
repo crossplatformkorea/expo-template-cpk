@@ -1,7 +1,7 @@
 {
   "name": "expo-template-cpk",
   "description": "An Expo template with router by Cross-Platform Korea",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",

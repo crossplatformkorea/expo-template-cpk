@@ -26,5 +26,5 @@ npx create-expo-app my-app --template expo-template-cpk
 
 ## 주요 소식
 
-- 기본적으로 [dooboo-ui](https://github.com/dooboolab/dooboo-ui), [Expo](https://expo.io)를 위한 UI 프레임워크가 프로젝트에 사전 설치되어 있습니다. 마음에 드시길 바랍니다 🧡.
+- 기본적으로 [cpk-ui](https://github.com/crossplatformkorea/cpk-ui), [Expo](https://expo.io)를 위한 UI 프레임워크가 프로젝트에 사전 설치되어 있습니다. 마음에 드시길 바랍니다 🧡.
 - 2023년 가장 빠른 패키지 매니저인 [bun](https://bun.sh)이 기본 패키지 매니저로 설정되어 있습니다.
