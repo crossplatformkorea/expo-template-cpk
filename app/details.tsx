@@ -1,5 +1,5 @@
 import styled from '@emotion/native';
-import {Typography} from 'dooboo-ui';
+import {Typography} from 'cpk-ui';
 import {Stack} from 'expo-router';
 
 import {t} from '../src/STRINGS';

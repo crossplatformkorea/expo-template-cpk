@@ -1,16 +1,11 @@
 import {useEffect, useState} from 'react';
 import type {ColorSchemeName} from 'react-native';
-import {Platform, useColorScheme} from 'react-native';
+import {ActivityIndicator, Platform, useColorScheme, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {dark, light} from '@dooboo-ui/theme';
 import styled, {css} from '@emotion/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Icon, useDooboo} from 'dooboo-ui';
-import CustomPressable from 'dooboo-ui/uis/CustomPressable';
-import StatusBarBrightness from 'dooboo-ui/uis/StatusbarBrightness';
 import {Stack, useRouter} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import * as SystemUI from 'expo-system-ui';
 
 import RootProvider from '../src/providers';
 import {
@@ -19,13 +14,17 @@ import {
   delayPressIn,
   WEB_URL,
 } from '../src/utils/constants';
+import {CustomPressable, Icon, useCPK} from 'cpk-ui';
+import StatusBarBrightness from 'cpk-ui/components/uis/StatusbarBrightness/StatusBarBrightness';
 
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
+SplashScreen.hideAsync();
 
 const Container = styled.View`
   flex: 1;
   align-self: stretch;
   background-color: ${({theme}) => theme.bg.paper};
+  background-color: red;
 `;
 
 const Content = styled.View`
@@ -37,7 +36,7 @@ const Content = styled.View`
 `;
 
 function Layout(): JSX.Element | null {
-  const {assetLoaded, theme} = useDooboo();
+  const {assetLoaded, theme} = useCPK();
   const {back, replace} = useRouter();
 
   useEffect(() => {
@@ -104,7 +103,6 @@ export default function RootLayout(): JSX.Element | null {
     undefined,
   );
 
-  // 테마 불러오기
   useEffect(() => {
     const initializeThemeType = async (): Promise<void> => {
       const darkMode = await AsyncStorage.getItem(AsyncStorageKey.DarkMode);
@@ -113,9 +111,10 @@ export default function RootLayout(): JSX.Element | null {
         ? colorScheme === 'dark'
         : darkMode === 'true';
 
-      SystemUI.setBackgroundColorAsync(
-        isDarkMode ? dark.bg.basic : light.bg.basic,
-      );
+      // Suddenly not working 🤔
+      // SystemUI.setBackgroundColorAsync(
+      //   isDarkMode ? dark.bg.basic : light.bg.basic,
+      // );
 
       setLocalThemeType(isDarkMode ? 'dark' : 'light');
     };
@@ -124,7 +123,21 @@ export default function RootLayout(): JSX.Element | null {
   }, [colorScheme]);
 
   if (!localThemeType) {
-    return null;
+    const bgColor = colorScheme === 'dark' ? 'black' : 'white';
+    const textColor = colorScheme === 'dark' ? 'white' : 'black';
+
+    return (
+      <View
+        style={css`
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          background-color: ${bgColor};
+        `}
+      >
+        <ActivityIndicator color={textColor} size="large" />
+      </View>
+    );
   }
 
   return (

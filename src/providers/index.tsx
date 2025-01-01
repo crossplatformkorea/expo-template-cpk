@@ -1,8 +1,7 @@
 import ErrorBoundary from 'react-native-error-boundary';
 import FallbackComponent from 'react-native-error-boundary/lib/ErrorBoundary/FallbackComponent';
 import {ActionSheetProvider} from '@expo/react-native-action-sheet';
-import type {ThemeType} from 'dooboo-ui';
-import {DoobooProvider} from 'dooboo-ui';
+import {CpkProvider, type ThemeType} from 'cpk-ui';
 
 import {theme} from '../theme';
 import {handleErrorConsole} from '../utils/error';
@@ -14,7 +13,7 @@ interface Props {
 
 function RootProvider({initialThemeType, children}: Props): JSX.Element {
   return (
-    <DoobooProvider
+    <CpkProvider
       themeConfig={{
         initialThemeType: initialThemeType ?? undefined,
         customTheme: theme,
@@ -26,7 +25,7 @@ function RootProvider({initialThemeType, children}: Props): JSX.Element {
       >
         <ActionSheetProvider>{children}</ActionSheetProvider>
       </ErrorBoundary>
-    </DoobooProvider>
+    </CpkProvider>
   );
 }
 

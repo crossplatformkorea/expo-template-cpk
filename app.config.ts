@@ -45,22 +45,31 @@ export default ({config}: ConfigContext): ExpoConfig => ({
       'expo-font',
       {
         fonts: [
-          'node_modules/dooboo-ui/uis/Icon/doobooui.ttf',
-          'node_modules/dooboo-ui/uis/Icon/Pretendard-Bold.otf',
-          'node_modules/dooboo-ui/uis/Icon/Pretendard-Regular.otf',
-          'node_modules/dooboo-ui/uis/Icon/Pretendard-Thin.otf',
+          'node_modules/cpk-ui/components/uis/Icon/cpk.ttf',
+          'node_modules/cpk-ui/components/uis/Icon/Pretendard-Bold.otf',
+          'node_modules/cpk-ui/components/uis/Icon/Pretendard-Regular.otf',
+          'node_modules/cpk-ui/components/uis/Icon/Pretendard-Thin.otf',
         ],
+      },
+    ],
+    [
+      'expo-splash-screen',
+      // https://github.com/expo/expo/issues/32515#issuecomment-2533398853
+      {
+        image: './assets/icon.png',
+        backgroundColor: '#1B1B1B',
+        dark: {backgroundColor: '#1B1B1B'},
+        ios: {
+          resizeMode: 'cover',
+          image: './assets/splash.png',
+        },
+        enableFullScreenImage_legacy: true,
+        android: {imageWidth: 200},
       },
     ],
   ],
   experiments: {
     typedRoutes: true,
-  },
-  splash: {
-    image: './assets/icon.png',
-    resizeMode: 'contain',
-    backgroundColor: '#1B1B1B',
-    imageWidth: 200,
   },
   extra: {
     ROOT_URL: process.env.ROOT_URL,

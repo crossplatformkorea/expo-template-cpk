@@ -1,5 +1,5 @@
 import '@emotion/react';
-import type {DoobooTheme as DoobooUiTheme} from '@dooboo-ui/theme';
+import type {DoobooTheme as DoobooUiTheme} from 'cpk-ui';
 import type {CustomAppTheme} from './theme';
 import {CSSObject} from '@emotion/react';
 import {StyleProp, ViewStyle} from 'react-native';
@@ -10,7 +10,7 @@ declare module '@emotion/react' {
   export interface Theme extends AllTheme {}
 }
 
-declare module 'dooboo-ui' {
+declare module 'cpk-ui' {
   export interface DoobooUiTheme extends AllTheme {}
 }
 

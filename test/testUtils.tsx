@@ -1,5 +1,5 @@
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import type {ThemeType} from 'dooboo-ui';
+import type {ThemeType} from 'cpk-ui';
 import type * as Device from 'expo-device';
 
 import RootProvider from '../src/providers';

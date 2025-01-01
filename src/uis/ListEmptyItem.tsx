@@ -1,6 +1,6 @@
 import type {ViewStyle} from 'react-native';
 import styled, {css} from '@emotion/native';
-import {Icon, useDooboo} from 'dooboo-ui';
+import {Icon, useCPK} from 'cpk-ui';
 
 const Container = styled.View`
   align-items: center;
@@ -8,7 +8,7 @@ const Container = styled.View`
 `;
 
 function Component({style}: {style?: ViewStyle}): JSX.Element {
-  const {theme} = useDooboo();
+  const {theme} = useCPK();
 
   return (
     <Container

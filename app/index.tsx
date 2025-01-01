@@ -1,6 +1,6 @@
 import styled, {css} from '@emotion/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Button, SwitchToggle, useDooboo} from 'dooboo-ui';
+import {Button, SwitchToggle, useCPK} from 'cpk-ui';
 import {Stack, useRouter} from 'expo-router';
 
 import {t} from '../src/STRINGS';
@@ -23,7 +23,7 @@ const Content = styled.View`
 `;
 
 export default function Index(): JSX.Element {
-  const {themeType, changeThemeType} = useDooboo();
+  const {themeType, changeThemeType} = useCPK();
   const {push} = useRouter();
 
   return (

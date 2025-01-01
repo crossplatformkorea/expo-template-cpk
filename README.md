@@ -15,7 +15,7 @@ npx create-expo-app my-app --template expo-template-cpk
 - [react-native](https://github.com/facebook/react-native)
 - [expo-router](https://expo.github.io/router)
 - [emotion](https://emotion.sh)
-- [dooboo-ui](https://github.com/dooboolab/dooboo-ui)
+- [cpk-ui](https://github.com/crossplatformkorea/cpk-ui)
 - [jest](https://github.com/facebook/jest)
 - [react-native-testing-library](https://github.com/callstack/react-native-testing-library)
 - [typescript](https://github.com/Microsoft/TypeScript)

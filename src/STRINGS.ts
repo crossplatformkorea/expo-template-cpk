@@ -1,5 +1,5 @@
 import type {ComponentProps} from 'react';
-import type {Icon} from 'dooboo-ui';
+import type {Icon} from 'cpk-ui';
 import * as Localization from 'expo-localization';
 
 import en from '../assets/langs/en.json';
