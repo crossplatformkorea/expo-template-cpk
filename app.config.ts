@@ -57,14 +57,9 @@ export default ({config}: ConfigContext): ExpoConfig => ({
       // https://github.com/expo/expo/issues/32515#issuecomment-2533398853
       {
         image: './assets/icon.png',
-        backgroundColor: '#1B1B1B',
-        dark: {backgroundColor: '#1B1B1B'},
-        ios: {
-          resizeMode: 'cover',
-          image: './assets/splash.png',
-        },
-        enableFullScreenImage_legacy: true,
-        android: {imageWidth: 200},
+        backgroundColor: '#EFEFEF',
+        dark: {backgroundColor: '#232323'},
+        imageWidth: 200,
       },
     ],
   ],
@@ -84,9 +79,6 @@ export default ({config}: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ['**/*'],
   userInterfaceStyle: 'automatic',
-  locales: {
-    ko: './assets/langs/ios/ko.json',
-  },
   ios: {
     buildNumber: buildNumber.toString(),
     bundleIdentifier: 'io.myapp',
