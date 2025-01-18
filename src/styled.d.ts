@@ -1,17 +1,17 @@
 import '@emotion/react';
-import type {DoobooTheme as DoobooUiTheme} from 'cpk-ui';
 import type {CustomAppTheme} from './theme';
 import {CSSObject} from '@emotion/react';
 import {StyleProp, ViewStyle} from 'react-native';
+import {CpkTheme} from 'cpk-ui/utils/theme';
 
-type AllTheme = CustomAppTheme & DoobooUiTheme;
+type AllTheme = CustomAppTheme & CpkTheme;
 
 declare module '@emotion/react' {
   export interface Theme extends AllTheme {}
 }
 
 declare module 'cpk-ui' {
-  export interface DoobooUiTheme extends AllTheme {}
+  export interface CpkTheme extends AllTheme {}
 }
 
 declare module '@emotion/native' {
