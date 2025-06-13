@@ -11,7 +11,7 @@
       "dom"
     ],
     "module": "es2015",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "noEmit": true,
     "noUnusedLocals": false,

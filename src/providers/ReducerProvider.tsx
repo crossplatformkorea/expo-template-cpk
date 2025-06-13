@@ -45,7 +45,7 @@ interface Props {
 type Reducer = (state: State, action: Action) => State;
 
 const setUser =
-  (dispatch: React.Dispatch<SetUserAction>) =>
+  (dispatch: React.Dispatch<Action>) =>
   (user: Partial<User>): void => {
     dispatch({
       type: ActionType.SetUser,
@@ -70,7 +70,7 @@ const reducer: Reducer = (state = initialState, action) => {
 };
 
 function ReducerProvider({children}: Props): JSX.Element {
-  const [state, dispatch] = useReducer<Reducer>(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const actions = {
     setUser: setUser(dispatch),

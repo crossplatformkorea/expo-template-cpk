@@ -7,6 +7,7 @@ import ko from '../assets/langs/ko.json';
 
 // import {I18n} from 'i18n-js';
 // ad-hoc: https://github.com/fnando/i18n/issues/26#issuecomment-1225775247
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const {I18n} = require('i18n-js/dist/require/index');
 const i18n = new I18n({en, ko});
 
