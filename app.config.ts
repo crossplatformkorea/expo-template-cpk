@@ -36,6 +36,7 @@ export default ({config}: ConfigContext): ExpoConfig => ({
   icon: './assets/icon.png',
   newArchEnabled: true,
   plugins: [
+    'expo-web-browser',
     // @ts-ignore
     withAndroidLocalizedName,
     'expo-router',
