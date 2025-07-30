@@ -1,6 +1,6 @@
 import type {ComponentProps} from 'react';
 import type {Icon} from 'cpk-ui';
-import * as Localization from 'expo-localization';
+import {getLocales} from 'expo-localization';
 
 import en from '../assets/langs/en.json';
 import ko from '../assets/langs/ko.json';
@@ -13,7 +13,7 @@ const i18n = new I18n({en, ko});
 
 i18n.defaultLocale = 'en';
 i18n.enableFallback = true;
-i18n.locale = Localization.locale;
+i18n.locale = getLocales()[0]?.languageTag || 'en';
 
 export const getLocale = (): string => (i18n.locale === 'ko-US' ? 'ko' : 'en');
 
