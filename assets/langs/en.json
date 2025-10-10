@@ -1,9 +1,9 @@
 {
-  "home": {
-    "title": "Home",
-    "seeDetails": "See Details"
-  },
   "details": {
     "title": "Details"
+  },
+  "home": {
+    "seeDetails": "See Details",
+    "title": "Home"
   }
 }

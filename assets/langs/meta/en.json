@@ -1,10 +1,9 @@
 {
-  "android": {
-    "app_name": "myapp"
+  "details": {
+    "title": "Details"
   },
-  "ios": {
-    "CFBundleDisplayName": "myapp",
-    "NSMicrophoneUsageDescription": "The app requests access to the microphone for voice input or recording features. By processing your voice, we can provide features such as voice commands or recording. You can revoke this permission at any time in Settings.",
-    "NSUserTrackingUsageDescription": "The app requests permission to track your activity across other companies' apps and websites to provide personalized advertising. By understanding your interests, we can provide more relevant advertisements. You can revoke this permission at any time in Settings."
+  "home": {
+    "seeDetails": "See Details",
+    "title": "Home"
   }
 }
