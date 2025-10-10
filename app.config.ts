@@ -1,7 +1,6 @@
 import 'dotenv/config';
 
 import type {ConfigContext, ExpoConfig} from '@expo/config';
-import withAndroidLocalizedName from '@mmomtchev/expo-android-localized-app-name';
 import dotenv from 'dotenv';
 import {expand} from 'dotenv-expand';
 import path from 'path';
@@ -35,10 +34,12 @@ export default ({config}: ConfigContext): ExpoConfig => ({
   orientation: 'default',
   icon: './assets/icon.png',
   newArchEnabled: true,
+  locales: {
+    ko: './assets/langs/meta/ko.json',
+    en: './assets/langs/meta/en.json',
+  },
   plugins: [
     'expo-web-browser',
-    // @ts-ignore
-    withAndroidLocalizedName,
     'expo-router',
     'expo-tracking-transparency',
     'expo-localization',
@@ -117,6 +118,6 @@ export default ({config}: ConfigContext): ExpoConfig => ({
       },
     ],
   },
-  description: 'Starter project from dooboo-cli.',
+  description: 'Starter project from Cross-Platform Korea.',
   web: {bundler: 'metro', favicon: './assets/favicon.png'},
 });
