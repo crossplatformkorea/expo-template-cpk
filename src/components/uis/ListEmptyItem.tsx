@@ -1,5 +1,5 @@
 import type {ViewStyle} from 'react-native';
-import styled, {css} from '@emotion/native';
+import {styled, css} from 'kstyled';
 import {Icon, useCPK} from 'cpk-ui';
 
 const Container = styled.View`

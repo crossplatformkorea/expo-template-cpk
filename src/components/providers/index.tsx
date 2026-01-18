@@ -3,8 +3,8 @@ import FallbackComponent from 'react-native-error-boundary/lib/ErrorBoundary/Fal
 import {ActionSheetProvider} from '@expo/react-native-action-sheet';
 import {CpkProvider, type ThemeType} from 'cpk-ui';
 
-import {theme} from '../theme';
-import {handleErrorConsole} from '../utils/error';
+import {theme} from '../../theme';
+import {handleErrorConsole} from '../../utils/error';
 
 interface Props {
   initialThemeType?: ThemeType;

@@ -1,7 +1,7 @@
 import type {Dispatch, SetStateAction} from 'react';
 import {useState} from 'react';
 
-import createCtx from '../utils/createCtx';
+import createCtx from '../../utils/createCtx';
 
 interface User {
   displayName: string;

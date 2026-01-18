@@ -1,4 +1,4 @@
-import styled, {css} from '@emotion/native';
+import {styled, css} from 'kstyled';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Button, SwitchToggle, useCPK} from 'cpk-ui';
 import {Stack, useRouter} from 'expo-router';

@@ -5,7 +5,7 @@ import {act, fireEvent, render} from '@testing-library/react-native';
 import {
   StateProvider,
   useStateContext,
-} from '../../../src/providers/StateProvider';
+} from '../../../../src/components/providers/StateProvider';
 
 function FakeChild(): JSX.Element {
   const {setUser} = useStateContext();

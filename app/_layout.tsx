@@ -2,12 +2,12 @@ import {useEffect, useState} from 'react';
 import type {ColorSchemeName} from 'react-native';
 import {ActivityIndicator, Platform, useColorScheme, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import styled, {css} from '@emotion/native';
+import {styled, css} from 'kstyled';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Stack, useRouter} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 
-import RootProvider from '../src/providers';
+import RootProvider from '../src/components/providers';
 import {
   AsyncStorageKey,
   COMPONENT_WIDTH,

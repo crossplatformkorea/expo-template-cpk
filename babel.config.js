@@ -3,7 +3,7 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      '@emotion',
+      'babel-plugin-kstyled',
       'react-native-reanimated/plugin',
     ],
   };

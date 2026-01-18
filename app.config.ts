@@ -39,6 +39,7 @@ export default ({config}: ConfigContext): ExpoConfig => ({
     en: './assets/langs/meta/en.json',
   },
   plugins: [
+    '@react-native-community/datetimepicker',
     'expo-web-browser',
     'expo-router',
     'expo-tracking-transparency',

@@ -5,7 +5,7 @@ import {render} from '@testing-library/react-native';
 import {
   ReducerProvider,
   useReducerContext,
-} from '../../../src/providers/ReducerProvider';
+} from '../../../../src/components/providers/ReducerProvider';
 
 function FakeChild(): JSX.Element {
   const {state, setUser} = useReducerContext();
