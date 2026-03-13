@@ -4,19 +4,19 @@
  * The original react-native-web-hooks uses findDOMNode which was removed
  * in React 19. This shim provides the same API using modern ref patterns.
  */
-import {useState, useEffect, useCallback} from 'react';
-import {Platform, Dimensions, PixelRatio} from 'react-native';
+import {useState, useEffect, useCallback, createElement} from 'react';
+import {Platform, Dimensions, PixelRatio, View} from 'react-native';
 
 // Modern pseudo hook using ref.current directly (no findDOMNode)
 function createPseudoHook({events}) {
   return function (ref) {
-    if (Platform.OS !== 'web') {
-      return false;
-    }
-
     const [isActive, setActive] = useState(false);
 
     useEffect(() => {
+      if (Platform.OS !== 'web') {
+        return;
+      }
+
       const node = ref && ref.current;
       if (!node) {
         return;
@@ -38,7 +38,11 @@ function createPseudoHook({events}) {
         node.removeEventListener(eventIn, onStart);
         node.removeEventListener(eventOut, onEnd);
       };
-    }, [ref && ref.current]);
+    }, [ref]);
+
+    if (Platform.OS !== 'web') {
+      return false;
+    }
 
     return isActive;
   };
@@ -110,7 +114,13 @@ export function Hoverable({children, onHoverIn, onHoverOut}) {
     return typeof children === 'function' ? children(false) : children;
   }
 
-  return typeof children === 'function' ? children(isHovered) : children;
+  const content = typeof children === 'function' ? children(isHovered) : children;
+
+  return createElement(
+    View,
+    {onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave},
+    content,
+  );
 }
 
 export function Resizable({children}) {
