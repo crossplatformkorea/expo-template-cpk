@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import type {ColorSchemeName} from 'react-native';
 import {ActivityIndicator, Platform, useColorScheme, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {styled, css} from 'kstyled';
@@ -24,7 +23,6 @@ const Container = styled.View`
   flex: 1;
   align-self: stretch;
   background-color: ${({theme}) => theme.bg.paper};
-  background-color: red;
 `;
 
 const Content = styled.View`
@@ -99,9 +97,9 @@ function Layout(): JSX.Element | null {
 
 export default function RootLayout(): JSX.Element | null {
   const colorScheme = useColorScheme();
-  const [localThemeType, setLocalThemeType] = useState<string | undefined>(
-    undefined,
-  );
+  const [localThemeType, setLocalThemeType] = useState<
+    'light' | 'dark' | undefined
+  >(undefined);
 
   useEffect(() => {
     const initializeThemeType = async (): Promise<void> => {
@@ -146,7 +144,7 @@ export default function RootLayout(): JSX.Element | null {
         flex: 1;
       `}
     >
-      <RootProvider initialThemeType={localThemeType as ColorSchemeName}>
+      <RootProvider initialThemeType={localThemeType}>
         <>
           <StatusBarBrightness />
           <Layout />

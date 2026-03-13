@@ -44,6 +44,8 @@ export default ({config}: ConfigContext): ExpoConfig => ({
     'expo-router',
     'expo-tracking-transparency',
     'expo-localization',
+    'expo-image',
+    'expo-sharing',
     [
       'expo-font',
       {
@@ -80,7 +82,6 @@ export default ({config}: ConfigContext): ExpoConfig => ({
     // requestHeaders: {'expo-channel-name': 'production'},
     // url: '',
   },
-  assetBundlePatterns: ['**/*'],
   userInterfaceStyle: 'automatic',
   ios: {
     buildNumber: buildNumber.toString(),

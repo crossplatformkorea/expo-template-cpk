@@ -1,13 +1,13 @@
 import ErrorBoundary from 'react-native-error-boundary';
 import FallbackComponent from 'react-native-error-boundary/lib/ErrorBoundary/FallbackComponent';
 import {ActionSheetProvider} from '@expo/react-native-action-sheet';
-import {CpkProvider, type ThemeType} from 'cpk-ui';
+import {CpkProvider} from 'cpk-ui';
 
 import {theme} from '../../theme';
 import {handleErrorConsole} from '../../utils/error';
 
 interface Props {
-  initialThemeType?: ThemeType;
+  initialThemeType?: 'light' | 'dark';
   children?: JSX.Element;
 }
 

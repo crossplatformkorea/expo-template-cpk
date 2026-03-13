@@ -12,22 +12,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
-      - uses: oven-sh/setup-bun@v1
+          node-version: 22.x
+      - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: Install modules
-        run: bun install --immutable
+        run: bun install --frozen-lockfile
 
       - name: Check linting
         run: bun lint:all
 
       - name: Build typescript
-        run: bun tsc
+        run: bun typecheck
 
       - name: Remove dist
         run: rm -rf ./dist

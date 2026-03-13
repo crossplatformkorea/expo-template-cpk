@@ -33,10 +33,7 @@ export default async (): Promise<Config.InitialOptions> => {
       './node_modules/react-native-gesture-handler/jestSetup.js',
     ],
     cacheDirectory: '.jest/cache',
-    setupFilesAfterEnv: [
-      '@testing-library/jest-native/extend-expect',
-      './test/testSetupAfterEnv.ts',
-    ],
+    setupFilesAfterEnv: ['./test/testSetupAfterEnv.ts'],
     haste: {
       defaultPlatform: 'ios',
       platforms: ['android', 'ios', 'native'],
