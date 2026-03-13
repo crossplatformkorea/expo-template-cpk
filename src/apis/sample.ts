@@ -18,7 +18,7 @@ export const sample = async (
     const res: Response = await fetch(`${ROOT_URL}/sample`, fetchOption);
 
     return res;
-  } catch (err: any) {
-    throw new Error(err);
+  } catch (err) {
+    throw err instanceof Error ? err : new Error(String(err));
   }
 };

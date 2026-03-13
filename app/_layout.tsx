@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import type {ColorSchemeName} from 'react-native';
 import {ActivityIndicator, Platform, useColorScheme, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {styled, css} from 'kstyled';
@@ -146,7 +145,7 @@ export default function RootLayout(): JSX.Element | null {
         flex: 1;
       `}
     >
-      <RootProvider initialThemeType={localThemeType as ColorSchemeName}>
+      <RootProvider initialThemeType={localThemeType as 'light' | 'dark'}>
         <>
           <StatusBarBrightness />
           <Layout />

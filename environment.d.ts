@@ -6,11 +6,11 @@ declare module '*.svg' {
 }
 
 declare module '*.json' {
-  const content;
+  const content: Record<string, unknown>;
   export default content;
 }
 
 declare module '*.png' {
-  const content;
+  const content: number;
   export default content;
 }
