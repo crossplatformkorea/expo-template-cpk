@@ -1,8 +1,11 @@
 node_modules
 .expo
 .git
+.jest
+.claude
 npm-debug.log
 package-lock.json
+bun.lock
 .DS_Store
 ios
 android
