@@ -6,6 +6,7 @@ node_modules
 npm-debug.log
 package-lock.json
 bun.lock
+dist
 .DS_Store
 ios
 android
