@@ -18,7 +18,7 @@ interface Context {
 const [useCtx, Provider] = createCtx<Context>();
 
 interface Props {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 function StateProvider({children}: Props): React.ReactElement {

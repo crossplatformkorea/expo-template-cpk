@@ -9,7 +9,7 @@ import {handleErrorConsole} from '../../utils/error';
 
 interface Props {
   initialThemeType?: 'light' | 'dark';
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 function RootProvider({initialThemeType, children}: Props): React.ReactElement {

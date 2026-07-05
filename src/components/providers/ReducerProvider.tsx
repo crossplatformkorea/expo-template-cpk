@@ -40,7 +40,7 @@ interface SetUserAction {
 type Action = SetUserAction;
 
 interface Props {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 type Reducer = (state: State, action: Action) => State;

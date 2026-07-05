@@ -12,7 +12,7 @@ type MockContext = {
 };
 
 export const createTestElement = (
-  child: React.ReactElement,
+  child: React.ReactNode,
   mockContext?: MockContext,
   themeType?: ThemeType,
 ): React.ReactElement => (
@@ -71,7 +71,7 @@ export function createMockNavigation(): any {
 export function TestSafeAreaProvider({
   children,
 }: {
-  children: React.ReactElement;
+  children: React.ReactNode;
 }): React.ReactElement {
   return (
     <SafeAreaProvider
