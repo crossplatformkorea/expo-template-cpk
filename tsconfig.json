@@ -20,6 +20,10 @@
     "strict": true,
     "target": "es2020",
     "useUnknownInCatchVariables": true,
+    "types": [
+      "jest",
+      "react"
+    ],
     "typeRoots": [
       "expo-router/ts-declarations",
       "./@types",

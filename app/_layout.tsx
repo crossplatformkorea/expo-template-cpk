@@ -1,3 +1,4 @@
+import type React from 'react';
 import {useEffect, useState} from 'react';
 import {ActivityIndicator, Platform, useColorScheme, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -33,7 +34,7 @@ const Content = styled.View`
   background-color: ${({theme}) => theme.bg.basic};
 `;
 
-function Layout(): JSX.Element | null {
+function Layout(): React.ReactElement | null {
   const {assetLoaded, theme} = useCPK();
   const {back, replace} = useRouter();
 
@@ -95,7 +96,7 @@ function Layout(): JSX.Element | null {
   );
 }
 
-export default function RootLayout(): JSX.Element | null {
+export default function RootLayout(): React.ReactElement | null {
   const colorScheme = useColorScheme();
   const [localThemeType, setLocalThemeType] = useState<
     'light' | 'dark' | undefined

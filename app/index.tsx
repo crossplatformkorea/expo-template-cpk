@@ -1,3 +1,4 @@
+import type React from 'react';
 import {styled, css} from 'kstyled';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Button, SwitchToggle, useCPK} from 'cpk-ui';
@@ -22,7 +23,7 @@ const Content = styled.View`
   align-items: center;
 `;
 
-export default function Index(): JSX.Element {
+export default function Index(): React.ReactElement {
   const {themeType, changeThemeType} = useCPK();
   const {push} = useRouter();
 

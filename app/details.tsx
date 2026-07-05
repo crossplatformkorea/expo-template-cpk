@@ -1,3 +1,4 @@
+import type React from 'react';
 import {styled} from 'kstyled';
 import {Typography} from 'cpk-ui';
 import {Stack} from 'expo-router';
@@ -15,7 +16,7 @@ const Content = styled.View`
   padding: 16px;
 `;
 
-export default function Details(): JSX.Element {
+export default function Details(): React.ReactElement {
   return (
     <Container>
       <Stack.Screen

@@ -1,3 +1,4 @@
+import type React from 'react';
 import type {Dispatch, SetStateAction} from 'react';
 import {useState} from 'react';
 
@@ -17,10 +18,10 @@ interface Context {
 const [useCtx, Provider] = createCtx<Context>();
 
 interface Props {
-  children?: JSX.Element;
+  children?: React.ReactElement;
 }
 
-function StateProvider({children}: Props): JSX.Element {
+function StateProvider({children}: Props): React.ReactElement {
   const [user, setUser] = useState<User>({
     displayName: '',
     age: 0,
