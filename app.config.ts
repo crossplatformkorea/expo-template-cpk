@@ -42,6 +42,7 @@ export default ({config}: ConfigContext): ExpoConfig => ({
     '@react-native-community/datetimepicker',
     'expo-web-browser',
     'expo-router',
+    'expo-status-bar',
     'expo-tracking-transparency',
     'expo-localization',
     'expo-image',

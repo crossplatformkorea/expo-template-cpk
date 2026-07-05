@@ -1,3 +1,4 @@
+import type React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import type * as Device from 'expo-device';
 
@@ -11,10 +12,10 @@ type MockContext = {
 };
 
 export const createTestElement = (
-  child: JSX.Element,
+  child: React.ReactNode,
   mockContext?: MockContext,
   themeType?: ThemeType,
-): JSX.Element => (
+): React.ReactElement => (
   <RootProvider initialThemeType={themeType}>{child}</RootProvider>
 );
 
@@ -70,8 +71,8 @@ export function createMockNavigation(): any {
 export function TestSafeAreaProvider({
   children,
 }: {
-  children: JSX.Element;
-}): JSX.Element {
+  children: React.ReactNode;
+}): React.ReactElement {
   return (
     <SafeAreaProvider
       initialMetrics={{

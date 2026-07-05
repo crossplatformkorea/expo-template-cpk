@@ -1,3 +1,4 @@
+import type React from 'react';
 import ErrorBoundary from 'react-native-error-boundary';
 import FallbackComponent from 'react-native-error-boundary/lib/ErrorBoundary/FallbackComponent';
 import {ActionSheetProvider} from '@expo/react-native-action-sheet';
@@ -8,10 +9,10 @@ import {handleErrorConsole} from '../../utils/error';
 
 interface Props {
   initialThemeType?: 'light' | 'dark';
-  children?: JSX.Element;
+  children?: React.ReactNode;
 }
 
-function RootProvider({initialThemeType, children}: Props): JSX.Element {
+function RootProvider({initialThemeType, children}: Props): React.ReactElement {
   return (
     <CpkProvider
       themeConfig={{

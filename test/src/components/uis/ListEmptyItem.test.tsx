@@ -6,7 +6,7 @@ import Template from '../../../../src/components/uis/ListEmptyItem';
 import {createTestElement, createTestProps} from '../../../testUtils';
 
 let props: any;
-let component: JSX.Element;
+let component: React.ReactElement;
 let testingLib: RenderAPI;
 
 describe('Rendering', () => {

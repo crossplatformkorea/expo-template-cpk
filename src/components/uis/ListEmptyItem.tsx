@@ -1,3 +1,4 @@
+import type React from 'react';
 import type {ViewStyle} from 'react-native';
 import {styled, css} from 'kstyled';
 import {Icon, useCPK} from 'cpk-ui';
@@ -7,7 +8,7 @@ const Container = styled.View`
   justify-content: center;
 `;
 
-function Component({style}: {style?: ViewStyle}): JSX.Element {
+function Component({style}: {style?: ViewStyle}): React.ReactElement {
   const {theme} = useCPK();
 
   return (

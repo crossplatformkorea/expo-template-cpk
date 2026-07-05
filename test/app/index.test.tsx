@@ -1,3 +1,4 @@
+import type React from 'react';
 import 'react-native';
 
 import type {RenderAPI} from '@testing-library/react-native';
@@ -7,7 +8,7 @@ import Page from '../../app/index';
 import {createTestElement, createTestProps} from '../testUtils';
 
 let props: any;
-let component: JSX.Element;
+let component: React.ReactElement;
 let testingLib: RenderAPI;
 
 describe('Rendering', () => {
